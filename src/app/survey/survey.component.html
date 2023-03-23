@@ -17,32 +17,67 @@
             </div>
 
             <div class="col-6">
-                <div class="flex flex-column gap-2">
-                    <label htmlFor="password">密碼</label>
-                    <input pInputText id="password" aria-describedby="password-help" />
+                <label htmlFor="password">密碼</label>
+                <p-password [(ngModel)]="value" [toggleMask]="true"
+                    styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
+                    [inputStyle]="{'width':'100%'}"></p-password>
+
+
+            </div>
+            <div class="p-checkbox">
+                <div class="col-1">
+                    <p-checkbox name="groupname" value="val1" label="Angular" [(ngModel)]="selectedValues"></p-checkbox>
+                </div>
+            </div>
+
+            <div class="p-checkbox">
+                <div class="col-1">
+                    <p-checkbox name="groupname" value="val2" label="Bonita" [(ngModel)]="selectedValues"></p-checkbox>
+                </div>
+            </div>
+
+            <div class="p-checkbox">
+                <div class="col-1">
+                    <p-checkbox name="groupname" value="val3" label="Database"
+                        [(ngModel)]="selectedValues"></p-checkbox>
+                </div>
+            </div>
+
+            <div class="p-checkbox">
+                <div class="col-1">
+                    <p-checkbox name="groupname" value="val4" label="Golang" [(ngModel)]="selectedValues"></p-checkbox>
                 </div>
             </div>
 
 
-            <div class="flex align-items-center gap-1">
-                <p-checkbox name="group1" value="New York" inputId="ny"></p-checkbox>
-                <label for="ny">Angular</label>
+            <div class="col-6">
+                <div class="flex flex-column gap-2">
+                    <label htmlFor="re-password">確認密碼</label>
+                    <p-password [(ngModel)]="value" [toggleMask]="true"
+                        styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
+                        [inputStyle]="{'width':'100%'}"></p-password>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="flex flex-column gap-2">
+                    <label htmlFor="mail">Email</label>
+                    <input pInputText id="mail" aria-describedby="mail" />
+                </div>
+            </div>
+            <div class="col-6">
+                <label htmlFor="city">城市</label>
+                <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"
+                    styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
+                    [inputStyle]="{'width':'100%'}"></p-dropdown>
             </div>
 
-            <div class="flex align-items-center gap-1">
-                <p-checkbox name="group1" value="San Francisco" inputId="sf"></p-checkbox>
-                <label for="sf">Bonita</label>
-            </div>
+            <div class="col-6">
 
-            <div class="flex align-items-center gap-1">
-                <p-checkbox name="group1" value="Los Angeles" inputId="la"></p-checkbox>
-                <label for="la">Database</label>
+                <label htmlFor="job">職業</label>
+                <p-dropdown [options]="job" [(ngModel)]="selectedJob" optionLabel="profession"
+                    styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
+                    [inputStyle]="{'width':'100%'}"></p-dropdown>
             </div>
-            <div class="flex align-items-center gap-1">
-                <p-checkbox name="group1" value="Los Angeles" inputId="la"></p-checkbox>
-                <label for="la">Golang</label>
-            </div>
-
         </div>
     </p-card>
 </div>

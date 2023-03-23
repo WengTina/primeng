@@ -10,13 +10,13 @@ const panelMenu: any[] = [
   },
   {
     label: 'Table',
-    icon: 'pi pi-fw pi-file-edit',
+    icon: 'pi pi-user pi-file-edit',
     routerLink: ['/table'],
   },
   {
 
     label: '問卷',
-    icon: 'pi pi-fw pi-file-edit',
+    icon: 'pi pi-pencil pi-file-edit',
     routerLink: ['/survery'],
 
   },
