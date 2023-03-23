@@ -7,6 +7,17 @@ const panelMenu: any[] = [
     label: '表單',
     icon: 'pi pi-fw pi-file-edit',
     routerLink: ['/form'],
+  },
+  {
+    label: 'Table',
+    icon: 'pi pi-fw pi-file-edit',
+    routerLink: ['/table'],
+  },
+  {
+
+    label: '問卷',
+    icon: 'pi pi-fw pi-file-edit',
+    routerLink: ['/survery'],
 
   },
   //有下拉選單(範例)

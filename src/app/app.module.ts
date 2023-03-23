@@ -9,13 +9,15 @@ import { SharedModule } from './shared/shared.module';
 import { FormComponent } from './form/form.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SurveyComponent } from './survey/survey.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     ToolbarComponent,
-    SurveyComponent
+    SurveyComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
