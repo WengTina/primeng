@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { FormComponent } from './form/form.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SurveyComponent } from './survey/survey.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    SurveyComponent
   ],
   imports: [
     BrowserModule,
