@@ -17,7 +17,7 @@ const panelMenu: any[] = [
 
     label: '問卷',
     icon: 'pi pi-pencil pi-file-edit',
-    routerLink: ['/survery'],
+    routerLink: ['/survey'],
 
   },
   //有下拉選單(範例)

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DropdownModule } from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+
 
 interface City {
   name: string;
@@ -10,6 +14,7 @@ interface Job {
   code: string;
 }
 
+
 @Component({
   selector: 'app-survey',
   templateUrl: './survey.component.html',
@@ -17,6 +22,7 @@ interface Job {
 })
 export class SurveyComponent {
   selectedValues: string[] = [];
+  ingredient: string[] = [];
   value: string[] = [];
 
   cities: City[];
@@ -24,6 +30,9 @@ export class SurveyComponent {
 
   job: Job[];
   selectedJob!: Job;
+
+  //ingredient: string[] = [];
+
 
   constructor() {
     this.cities = [
@@ -43,5 +52,8 @@ export class SurveyComponent {
       { profession: '其他', code: 'OT' }
     ];
 
+    value: Date;
+
   }
+
 }

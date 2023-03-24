@@ -10,6 +10,9 @@ import { FormComponent } from './form/form.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SurveyComponent } from './survey/survey.component';
 import { TableComponent } from './table/table.component';
+import { RadioButtonModule } from 'primeng/radiobutton';
+
+
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { TableComponent } from './table/table.component';
     FormComponent,
     ToolbarComponent,
     SurveyComponent,
-    TableComponent
+    TableComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    RadioButtonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

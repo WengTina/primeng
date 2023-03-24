@@ -21,9 +21,8 @@
                 <p-password [(ngModel)]="value" [toggleMask]="true"
                     styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
                     [inputStyle]="{'width':'100%'}"></p-password>
-
-
             </div>
+
             <div class="p-checkbox">
                 <div class="col-1">
                     <p-checkbox name="groupname" value="val1" label="Angular" [(ngModel)]="selectedValues"></p-checkbox>
@@ -77,6 +76,62 @@
                 <p-dropdown [options]="job" [(ngModel)]="selectedJob" optionLabel="profession"
                     styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
                     [inputStyle]="{'width':'100%'}"></p-dropdown>
+            </div>
+
+
+            <div class="col-6">
+                <label htmlFor="job"><br>填寫日期</label>
+                <p-calendar [(ngModel)]="value" styleClass="p-password p-component p-inputwrapper p-input-icon-right"
+                    [style]="{'width':'99%'}" [inputStyle]="{'width':'100%'}" [showIcon]="true"
+                    inputId="icon"></p-calendar>
+            </div>
+
+
+            <div class="col-1">
+                <label htmlFor="gen"><br>性別</label>
+
+                <div class="radio-buttons">
+                    <p-radioButton name="gender" value="male" [(ngModel)]="ingredient"
+                        inputId="ingredient1"></p-radioButton>
+                    <label for="ingredient1" class="ml-2">男</label>
+
+                </div>
+            </div>
+
+            <div class="col-1">
+                <label htmlFor="gen"><br><br></label>
+                <div class="radio-buttons">
+                    <p-radioButton name="gender" value="famle" [(ngModel)]="ingredient"
+                        inputId="ingredient2"></p-radioButton>
+                    <label for="ingredient2" class="ml-2">女</label>
+
+                </div>
+            </div>
+
+
+            <div class="col-1">
+                <label htmlFor="gen"><br><br></label>
+                <div class="radio-buttons">
+                    <p-radioButton name="gender" value="other" [(ngModel)]="ingredient"
+                        inputId="ingredient3"></p-radioButton>
+                    <label for="ingredient3" class="ml-2">其他</label>
+
+                </div>
+            </div>
+
+
+            <div class="col-6">
+                <label htmlFor="qa"><br>問題/評論<br></label>
+                <textarea rows="2" cols="30" pInputTextarea [(ngModel)]="value" [style]="{'width':'98%'}"></textarea>
+            </div>
+
+
+
+            <div class="e-button">
+                <div class="col-12">
+                    <p-button label="送出" styleClass="p-button-rounded"></p-button>
+                </div>
+
             </div>
         </div>
     </p-card>
