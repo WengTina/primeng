@@ -52,7 +52,7 @@
             <div class="col-6">
                 <div class="flex flex-column gap-2">
                     <label htmlFor="re-password">確認密碼</label>
-                    <p-password [(ngModel)]="value" [toggleMask]="true"
+                    <p-password [(ngModel)]="value1" [feedback]="false"
                         styleClass="p-password p-component p-inputwrapper p-input-icon-right" [style]="{'width':'100%'}"
                         [inputStyle]="{'width':'100%'}"></p-password>
                 </div>
@@ -81,7 +81,7 @@
 
             <div class="col-6">
                 <label htmlFor="job"><br>填寫日期</label>
-                <p-calendar [(ngModel)]="value" styleClass="p-password p-component p-inputwrapper p-input-icon-right"
+                <p-calendar [(ngModel)]="value2" styleClass="p-password p-component p-inputwrapper p-input-icon-right"
                     [style]="{'width':'99%'}" [inputStyle]="{'width':'100%'}" [showIcon]="true"
                     inputId="icon"></p-calendar>
             </div>
@@ -122,7 +122,7 @@
 
             <div class="col-6">
                 <label htmlFor="qa"><br>問題/評論<br></label>
-                <textarea rows="2" cols="30" pInputTextarea [(ngModel)]="value" [style]="{'width':'98%'}"></textarea>
+                <textarea rows="2" cols="30" pInputTextarea [(ngModel)]="value3" [style]="{'width':'98%'}"></textarea>
             </div>
 
 

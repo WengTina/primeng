@@ -24,7 +24,9 @@ export class SurveyComponent {
   selectedValues: string[] = [];
   ingredient: string[] = [];
   value: string[] = [];
-
+  value1: string[] = [];
+  value2: string[] = [];
+  value3: string[] = [];
   cities: City[];
   selectedCity!: City;
 
