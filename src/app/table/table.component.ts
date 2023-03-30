@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 //定義物件類別
 interface student {
@@ -15,6 +16,8 @@ interface student {
 })
 export class TableComponent {
   student: student[] = [];
+  visible: boolean = false;
+  test: string = "123"
   ngOnInit(): void {
     this.student = [
       { position: 1, name: 'Rose', height: 178, weight: 43 },
@@ -35,4 +38,29 @@ export class TableComponent {
 
   }
 
+  confirm(): void {
+    this.visible = false;
+    Swal.fire({
+      icon: 'success',
+      title: '儲存完畢',
+
+    })
+  }
+
+  data: any = [{
+    position: '',
+    name: '',
+    height: '',
+    weight: ''
+
+  }]
+
+  showDialog(student: any): void {
+    this.data = student;
+    console.log("dataposition:" + this.data.position)
+    this.visible = true;
+    console.log("student:" + JSON.stringify(student))
+  }
 }
+
+
