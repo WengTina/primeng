@@ -10,7 +10,7 @@ const panelMenu: any[] = [
   },
   {
     label: 'Table',
-    icon: 'pi pi-user pi-file-edit',
+    icon: 'pi pi-table pi-file-edit',
     routerLink: ['/table'],
   },
   {
@@ -18,6 +18,13 @@ const panelMenu: any[] = [
     label: '問卷',
     icon: 'pi pi-pencil pi-file-edit',
     routerLink: ['/survey'],
+
+  },
+  {
+
+    label: 'CRUD',
+    icon: 'pi pi-database pi-file-edit',
+    routerLink: ['/crud'],
 
   },
   //有下拉選單(範例)

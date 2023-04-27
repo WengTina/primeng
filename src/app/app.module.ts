@@ -11,6 +11,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SurveyComponent } from './survey/survey.component';
 import { TableComponent } from './table/table.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { CrudComponent } from './crud/crud.component';
+import { EditCrudComponent } from './crud/edit-crud/edit-crud.component';
+
 
 
 
@@ -21,6 +24,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     ToolbarComponent,
     SurveyComponent,
     TableComponent,
+    CrudComponent,
+    EditCrudComponent,
 
 
   ],
