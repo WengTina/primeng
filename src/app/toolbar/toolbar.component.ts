@@ -27,6 +27,13 @@ const panelMenu: any[] = [
     routerLink: ['/crud'],
 
   },
+  {
+
+    label: '設備請購單',
+    icon: 'pi pi-cart-plus pi-file-edit',
+    routerLink: ['/puchase'],
+
+  },
   //有下拉選單(範例)
   {
     label: '社群',

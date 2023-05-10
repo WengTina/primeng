@@ -1,0 +1,102 @@
+<div class="container">
+    <p-card>
+        <h3>設備請購單</h3>
+        <p-divider></p-divider>
+        <!-- [paginator]="true" [rows]="8" -->
+        <p-table [value]="apiData" [lazy]="true" [totalRecords]="100" [rows]="10" [paginator]="true">
+            <ng-template pTemplate="caption">
+                <div class="d-flex justify-content-end">
+                    <span class="p-buttonset">
+                        <p-button (click)="addData=true" pTooltip="新增" tooltipPosition="top" icon="pi pi-plus"
+                            styleClass="p-button-text"></p-button>
+                    </span>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>申請人</th>
+                    <th>請購編號</th>
+                    <th>公司名稱</th>
+                    <th>請購部門</th>
+                    <th>編輯</th>
+
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-puchase>
+                <tr>
+
+                    <td>{{puchase.applicantname}}</td>
+                    <td>{{puchase.requisitions_id}}</td>
+                    <td>{{puchase.company}}</td>
+                    <td>{{puchase.department}}</td>
+                    <!-- <td>{{puchase.quantity}}</td>
+                    <td>{{puchase.product}}</td>
+                    <td>{{puchase.price}}</td> -->
+                    <td>
+                        <p-button icon="pi pi-pencil" (click)="edit(puchase.requisitions_id)"
+                            styleClass="p-button-rounded p-button-secondary p-button-outlined"></p-button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+</div>
+
+<!--Dialog-->
+<form [formGroup]="form">
+    <p-dialog [(visible)]="addData" header="新增">
+        <div class="row">
+            <div class="formgroup-inline">
+                <div class="col-6">
+                    <label class="text-red-500">*</label>
+                    <label>申請人</label>
+                    <input pInputText formControlName="applicantname">
+                </div>
+                <div class="col-6">
+                    <label>請購編號</label>
+                    <!-- <input pInputText formControlName="title"> -->
+                </div>
+            </div>
+            <div class="formgroup-inline">
+                <div class="col-6">
+                    <label class="text-red-500">*</label>
+                    <label>公司名稱</label>
+                    <input pInputText formControlName="company">
+                </div>
+                <div class="col-6">
+                    <label class="text-red-500">*</label>
+                    <label>請購部門</label>
+                    <input pInputText formControlName="department">
+                </div>
+            </div>
+            <div class="formgroup-inline">
+                <div class="col-6">
+                    <label class="text-red-500">*</label>
+                    <label>品名</label>
+                    <input pInputText formControlName="product">
+                </div>
+                <div class="col-6">
+                    <label class="text-red-500">*</label>
+                    <label>請購數量</label>
+                    <input pInputText formControlName="quantity">
+                </div>
+            </div>
+
+            <div class="col-6">
+                <label class="text-red-500">*</label>
+                <label>單價</label>
+                <input pInputText formControlName="price">
+            </div>
+            <div class="col-12">
+
+                <div class="flex justify-content-end">
+                    <p-button class="border-round w-5rem" label="新增" (click)="post()"
+                        styleClass="p-button-raised"></p-button>
+
+                    <p-button class="border-round w-5rem" label="取消" (click)="addData=false"
+                        styleClass="p-button-outlined"></p-button>
+                </div>
+            </div>
+        </div>
+    </p-dialog>
+</form>

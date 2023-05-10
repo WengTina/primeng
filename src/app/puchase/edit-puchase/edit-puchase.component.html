@@ -1,0 +1,60 @@
+<div class="container">
+    <form [formGroup]="form">
+        <p-card>
+            <div class="row">
+                <h3>設備請購單</h3>
+                <p-divider></p-divider>
+                <div class="formgroup-inline">
+                    <div class="col-6">
+                        <label class="text-red-500">*</label>
+                        <label>申請人</label>
+                        <input pInputText formControlName="applicantname">
+                    </div>
+                    <div class="col-6">
+                        <label>請購編號</label>
+                        <!-- <input pInputText formControlName="title"> -->
+                    </div>
+                </div>
+                <div class="formgroup-inline">
+                    <div class="col-6">
+                        <label class="text-red-500">*</label>
+                        <label>公司名稱</label>
+                        <input pInputText formControlName="company">
+                    </div>
+                    <div class="col-6">
+                        <label class="text-red-500">*</label>
+                        <label>請購部門</label>
+                        <input pInputText formControlName="department">
+                    </div>
+                </div>
+                <div class="formgroup-inline">
+                    <div class="col-6">
+                        <label class="text-red-500">*</label>
+                        <label>品名</label>
+                        <input pInputText formControlName="product">
+                    </div>
+                    <div class="col-6">
+                        <label class="text-red-500">*</label>
+                        <label>請購數量</label>
+                        <input pInputText formControlName="quality">
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <label class="text-red-500">*</label>
+                    <label>單價</label>
+                    <input pInputText formControlName="price">
+                </div>
+                <div class="flex justify-content-end ">
+                    <p-button class="border-round w-5rem border-indigo-600" label="儲存" (click)="patch()"
+                        styleClass="p-button-outlined"></p-button>
+                    <p-button class="border-round w-5rem" label="刪除" (click)="delete()"
+                        styleClass="p-button-outlined p-button-danger"></p-button>
+                    <p-button class="border-round w-5rem" label="取消" routerLink="/puchase"
+                        styleClass="p-button-raised p-button-secondary"></p-button>
+
+                </div>
+            </div>
+        </p-card>
+    </form>
+</div>

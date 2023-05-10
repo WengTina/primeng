@@ -13,6 +13,8 @@ import { TableComponent } from './table/table.component';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { CrudComponent } from './crud/crud.component';
 import { EditCrudComponent } from './crud/edit-crud/edit-crud.component';
+import { PuchaseComponent } from './puchase/puchase.component';
+import { EditPuchaseComponent } from './puchase/edit-puchase/edit-puchase.component';
 
 
 
@@ -26,6 +28,8 @@ import { EditCrudComponent } from './crud/edit-crud/edit-crud.component';
     TableComponent,
     CrudComponent,
     EditCrudComponent,
+    PuchaseComponent,
+    EditPuchaseComponent,
 
 
   ],
